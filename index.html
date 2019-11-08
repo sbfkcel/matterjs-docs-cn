@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Matter.js中文文档</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+</head>
+
+<body>
+  <div id="app">加载中</div>
+  <script src="//unpkg.com/docsify-edit-on-github@1.0.1/index.js"></script>
+  <script>
+    window.$docsify = {
+      name: 'Matter.js中文文档',
+      repo: 'https://github.com/sbfkcel/matterjs-docs-cn',
+      coverpage:false,
+      loadSidebar:true,
+      themeColor: '#e45f37',
+      homepage: 'docs/about.md',
+      search: {
+        noData: {
+          '/de-de/': 'Keine Ergebnisse!',
+          '/zh-cn/': '没有结果!',
+          '/': 'No results!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/de-de/': 'Suche',
+          '/zh-cn/': '搜索',
+          '/': 'Search'
+        }
+      },
+      //插件
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/sbfkcel/fws/tree/gh-pages/',
+          '',
+          '编辑'
+        )
+      ]
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script>
+    //离线模式支持
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    };
+  </script>
+</body>
+
+</html>
